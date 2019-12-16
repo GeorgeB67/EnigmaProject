@@ -74,8 +74,8 @@ namespace Enigma
             Rotor1.Add("C");
             Rotor1.Add("J");
 
-            Input = Rotor1[position]; //sets the inputted letter to the corrolating 
-            Console.WriteLine(Input);
+            Input = Rotor1[position];                   //sets the inputted letter to be the corrolating index of the Rotor.
+            Console.WriteLine(Input);                   //output
 
         }
     }
