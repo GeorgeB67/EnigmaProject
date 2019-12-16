@@ -10,10 +10,6 @@ namespace Enigma
     {
         static void Main(string[] args)
         {
-            string Input;
-            Console.WriteLine("Enter a single capitalized letter of the alphabet.");
-            Input = Console.ReadLine();
-            Console.WriteLine("You have entered '" + Input + "'.");
             List<string> Plugboard = new List<string>(); //input "plugboard, containg the alphabet
             Plugboard.Add("A");                         //add contents
             Plugboard.Add("B");
@@ -41,10 +37,6 @@ namespace Enigma
             Plugboard.Add("X");
             Plugboard.Add("Y");
             Plugboard.Add("Z");
-
-
-            int position = Plugboard.IndexOf(Input); //finds the index of the user input in the alphabet 
-            Console.WriteLine("Alphabet Index:" + position); //outputs the index of the character
 
             List<string> Rotor1 = new List<string>(); //first rotor, containing EKMFLGDQVZNTOWYHXUSPAIBRCJ
             Rotor1.Add("E");                          //add contents
@@ -74,8 +66,28 @@ namespace Enigma
             Rotor1.Add("C");
             Rotor1.Add("J");
 
-            Input = Rotor1[position];                   //sets the inputted letter to be the corrolating index of the Rotor.
-            Console.WriteLine(Input);                   //output
+            int i = 0;
+            while (i < 5)
+            {
+                string Input;
+                Console.WriteLine("Enter a single capitalized letter of the alphabet.");
+                Input = Console.ReadLine();
+                Console.WriteLine("You have entered '" + Input + "'.");
+
+
+                int position = Plugboard.IndexOf(Input); //finds the index of the user input in the alphabet 
+                Console.WriteLine("Alphabet Index:" + position); //outputs the index of the character
+
+
+                Input = Rotor1[position];                   //sets the inputted letter to be the corrolating index of the Rotor.
+                Console.WriteLine(Input);                   //output
+
+                String R1Rotate = Rotor1[0];                //stores the letter at the top of the rotor
+                Rotor1.RemoveAt(0);                         //removes the letter at the top
+                Rotor1.Add(R1Rotate);                       //adds the letter to the bottom
+                Console.WriteLine(Rotor1[25]);
+                Console.WriteLine(Rotor1[1]);
+            }
 
         }
     }
