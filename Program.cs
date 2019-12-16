@@ -10,7 +10,7 @@ namespace Enigma
     {
         static void Main(string[] args)
         {
-            List<string> Plugboard = new List<string>(); //input "plugboard, containg the alphabet
+            List<string> Plugboard = new List<string>(); //input "plugboard, containing the alphabet
             Plugboard.Add("A");                         //add contents
             Plugboard.Add("B");
             Plugboard.Add("C");
@@ -66,6 +66,34 @@ namespace Enigma
             Rotor1.Add("C");
             Rotor1.Add("J");
 
+            List<string> Rotor2 = new List<string>();
+            Rotor2.Add("A");
+            Rotor2.Add("J");
+            Rotor2.Add("D");
+            Rotor2.Add("K");
+            Rotor2.Add("S");
+            Rotor2.Add("I");
+            Rotor2.Add("R");
+            Rotor2.Add("U");
+            Rotor2.Add("X");
+            Rotor2.Add("B");
+            Rotor2.Add("L");
+            Rotor2.Add("H");
+            Rotor2.Add("W");
+            Rotor2.Add("T");
+            Rotor2.Add("M");
+            Rotor2.Add("C");
+            Rotor2.Add("Q");
+            Rotor2.Add("G");
+            Rotor2.Add("Z");
+            Rotor2.Add("N");
+            Rotor2.Add("P");
+            Rotor2.Add("Y");
+            Rotor2.Add("F");
+            Rotor2.Add("V");
+            Rotor2.Add("O");
+            Rotor2.Add("E");
+
             int i = 0;
             while (i < 5)
             {
@@ -85,8 +113,7 @@ namespace Enigma
                 String R1Rotate = Rotor1[0];                //stores the letter at the top of the rotor
                 Rotor1.RemoveAt(0);                         //removes the letter at the top
                 Rotor1.Add(R1Rotate);                       //adds the letter to the bottom
-                Console.WriteLine(Rotor1[25]);
-                Console.WriteLine(Rotor1[1]);
+
             }
 
         }
